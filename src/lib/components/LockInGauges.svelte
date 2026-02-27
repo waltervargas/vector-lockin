@@ -45,7 +45,7 @@
           style="width: {value * 100}%; background: {getColor(value)}; box-shadow: 0 0 8px {getColor(value)}60;"
         ></div>
       </div>
-      <div class="gauge-desc">{DIMENSION_DESCRIPTIONS[dim]}</div>
+      <div class="gauge-desc" title={DIMENSION_DESCRIPTIONS[dim]}>{DIMENSION_DESCRIPTIONS[dim]}</div>
     </div>
   {/each}
 
@@ -57,10 +57,10 @@
 
 <style>
   .gauges-panel {
-    padding: 16px;
+    padding: 12px 16px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
   }
   .panel-title {
     font-size: 13px;
@@ -68,12 +68,12 @@
     color: #00f5ff;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
   .gauge-row {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
   }
   .gauge-header {
     display: flex;
