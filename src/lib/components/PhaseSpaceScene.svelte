@@ -1,15 +1,20 @@
 <script lang="ts">
-  import { T } from '@threlte/core';
+  import { T, useThrelte } from '@threlte/core';
   import { OrbitControls, Grid, interactivity } from '@threlte/extras';
   import Particle from './Particle.svelte';
   import AttractorBasin from './AttractorBasin.svelte';
   import { profileStore } from '$lib/stores/organizationProfile.svelte';
+  import * as THREE from 'three';
 
-  // Enable interactivity plugin so onclick/onpointerenter work on meshes
   interactivity();
+
+  const { camera } = useThrelte();
+  const cam = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
+  cam.position.set(5, 4, 5);
+  camera.set(cam);
 </script>
 
-<T.PerspectiveCamera makeDefault position={[5, 4, 5]} fov={50}>
+<T is={cam}>
   <OrbitControls
     enableDamping
     dampingFactor={0.05}
@@ -18,7 +23,7 @@
     autoRotate
     autoRotateSpeed={0.3}
   />
-</T.PerspectiveCamera>
+</T>
 
 <T.AmbientLight intensity={0.15} />
 
