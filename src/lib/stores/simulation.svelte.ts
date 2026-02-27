@@ -1,5 +1,5 @@
-import { lockInState } from './lockInState';
-import { profileStore } from './organizationProfile';
+import { lockInState } from './lockInState.svelte';
+import { profileStore } from './organizationProfile.svelte';
 import type { PhasePosition, AttractorConfig } from '$lib/types';
 
 function createSimulation() {

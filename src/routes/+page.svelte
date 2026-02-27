@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+  import PhaseSpace from '$lib/components/PhaseSpace.svelte';
+</script>
+
+<div style="width: 100vw; height: 100vh; background: #0a0a1a;">
+  <PhaseSpace />
+</div>
