@@ -22,13 +22,17 @@
   </button>
 
   <div class="slider-group">
-    <label class="slider-label">Time: {simulation.time.toFixed(1)}y</label>
-    <input type="range" min="0" max="20" step="0.1" value={simulation.time} oninput={handleInput} class="slider" />
+    <label class="slider-label">
+      Time: {simulation.time.toFixed(1)}y
+      <input type="range" min="0" max="20" step="0.1" value={simulation.time} oninput={handleInput} class="slider" />
+    </label>
   </div>
 
   <div class="slider-group">
-    <label class="slider-label">Speed: {simulation.speed.toFixed(1)}x</label>
-    <input type="range" min="0.1" max="5" step="0.1" value={simulation.speed} oninput={handleSpeed} class="slider" />
+    <label class="slider-label">
+      Speed: {simulation.speed.toFixed(1)}x
+      <input type="range" min="0.1" max="5" step="0.1" value={simulation.speed} oninput={handleSpeed} class="slider" />
+    </label>
   </div>
 </div>
 
@@ -69,6 +73,7 @@
     font-family: 'JetBrains Mono', monospace;
   }
   .slider {
+    appearance: none;
     -webkit-appearance: none;
     width: 100%;
     height: 4px;
@@ -77,6 +82,7 @@
     outline: none;
   }
   .slider::-webkit-slider-thumb {
+    appearance: none;
     -webkit-appearance: none;
     width: 12px;
     height: 12px;
